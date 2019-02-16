@@ -22,9 +22,9 @@ Obs.: Salário Bruto - Descontos = Salário Líquido.
 console.log('Quando você ganha por hora e por mês?');
 prompt.get(['valorHora', 'horaMes'], function(err, resp) {
   var salario = Number(resp.valorHora * resp.horaMes);
-  var ir = (11 / 100.0 * salario);
-  var inss = (8 / 100.0 * salario);
-  var sindicato = (5 / 100.0 * salario);
+  var ir = (salario / 100.0) * 11;
+  var inss = (salario / 100.0) * 8;
+  var sindicato = (salario / 100.0) * 5;
   var desconto = ir + inss + sindicato;
   var salarioLiquido = salario - desconto;
 
